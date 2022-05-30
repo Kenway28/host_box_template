@@ -3,61 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media.css" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/all.css" />
-    <script src="js/smooth-scroll.polyfills.min.js"></script>
     <title>HostBox</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/My Library.css" />
+    <link rel="stylesheet" href="css/master.css" />
+    <link rel="stylesheet" href="css/media.css" />
   </head>
-
   <body>
+    <!-- start header -->
     <header>
-      <div class="container">
-        <i class="far fa-bars hidden-lg hidden-md" id="menubtn"></i>
-
+      <div class="container flx">
         <h2>HostBox</h2>
-        <nav id="nav" class="hidden-xs hidden-sm">
-          <!-- <nav> -->
-
-          <ul>
+        <!-- <nav> -->
+        <nav id="nav" class="flx">
+          <div class="hamburger hidden-sm">
+            <span class="line one"></span><span class="line two"></span
+            ><span class="line three"></span>
+          </div>
+          <ul class="hidden-xs hamburger-menu">
             <li><a href="#header">Home</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="contact us.html">Contact Us</a></li>
             <li>
-              <a href=""> Log in</a>
-            </li>
-            <li>
-              <a href=""> Sign Up </a>
-            </li>
-            <li class="lang">
-              EN
-              <i class="fas fa-angle-down"></i>
+              <a href="">Account</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
+    <!-- end header -->
+    <!-- start banner -->
     <section class="banner" id="header">
-      <div class="container">
-        <div class="banner-col-left">
+      <div class="container flx">
+        <div class="flx-col-2">
           <h2>Fast & Secure Cloud Services</h2>
           <p>
             Up to 40% off free web hosting plans + SSL and CloudFlare, Ends in
             31<sup>th</sup> March
           </p>
-          <button>Start Now</button>
+          <button class="main-btn">Start Now</button>
         </div>
-        <div class="banner-col-right">
+        <div class="flx-col-2">
           <img src="images/k.png" alt="" />
         </div>
       </div>
     </section>
+    <!-- end banner -->
+
     <!-- start domain search -->
     <section class="domain-search text-center">
       <div class="container">
-        <h2 class="heading">Search your domain</h2>
+        <h2 class="section-heading">Search your domain</h2>
         <p>
           Enter the domain name you want and choose any extension (choose
           between .com, .xyz .Online .Tech., .Site .Net And many more)
@@ -67,105 +64,143 @@
             type="text"
             name="domain"
             placeholder="enter domain name"
-            required
+            required=""
             autocomplete="off"
           />
-          <input class="button" type="submit" value="Search" />
-          <!-- <button>Search</button> -->
+          <button type="submit" name="search">
+            <i class="far fa-search"></i>
+          </button>
         </form>
       </div>
     </section>
     <!-- end domain search -->
-    <!-- start pricing-table -->
-    <section class="pricing-table" id="pricing">
+    <!-- start plans -->
+
+    <section class="plans" id="pricing">
       <div class="container text-center">
-        <h2 class="heading">Choose Your Plan</h2>
-        <div class="plan text-center">
-          <h2>starter</h2>
-          <p><span>&dollar;10.00</span> /mo</p>
-          <ul>
-            <li>500 GB Storage Space</li>
-            <li>3 TB Data Transfer</li>
-            <li>Basic Managed Panel</li>
-            <li>24/7 Fast Support</li>
-            <li>100 Premium Themes</li>
-            <li>Cancel or Upgrade Anytime</li>
-          </ul>
-          <button type="submit">start now</button>
-        </div>
-        <div class="plan text-center">
-          <h2>professional</h2>
-          <p><span>&dollar;20.00</span> /mo</p>
-          <ul>
-            <li>1 TB Cloud Space</li>
-            <li>8 TB Data Transfer</li>
-            <li>Fully Managed Panel</li>
-            <li>15-minute Quick Support</li>
-            <li>Unlimted Web Addons</li>
-            <li>Cancel or Upgrade Anytime</li>
-          </ul>
-          <button type="submit">start now</button>
-        </div>
-        <div class="plan text-center">
-          <h2>premium</h2>
-          <p><span>&dollar;40.00</span> /mo</p>
-          <ul>
-            <li>4 TB Cloud Space</li>
-            <li>20 TB Data Transfer</li>
-            <li>Fully Managed Panel</li>
-            <li>15-minute Quick Support</li>
-            <li>Top Notch Web Apps</li>
-            <li>Advanced Scalable</li>
-          </ul>
-          <button type="submit">start now</button>
-        </div>
-        <h2 class="heading">30 Day Money Back Guarantee</h2>
+        <h2 class="section-heading">Choose Your Plan</h2>
         <p>
-          if you are not satisfied with hostbox we will return the amount paid
-          to you without complications or risk
+          30 Day Money Back Guarantee , if you are not satisfied we will return
+          the amount paid to you without complications or risk
         </p>
-        <button class="btn-start">Start Now</button>
+        <div class="plans-container">
+          <div class="plan">
+            <h2>starter</h2>
+            <h3>$10.00</h3>
+            <ul>
+              <li>500 GB Storage Space</li>
+              <li>3 TB Data Transfer</li>
+              <li>Basic Managed Panel</li>
+              <li>24/7 Fast Support</li>
+              <li>100 Premium Themes</li>
+              <li>Cancel or Upgrade Anytime</li>
+            </ul>
+            <button type="submit">start now</button>
+          </div>
+          <div class="plan">
+            <h2>professional</h2>
+            <h3>$20.00</h3>
+            <ul>
+              <li>1 TB Cloud Space</li>
+              <li>8 TB Data Transfer</li>
+              <li>Fully Managed Panel</li>
+              <li>15-minute Quick Support</li>
+              <li>Unlimted Web Addons</li>
+              <li>Cancel or Upgrade Anytime</li>
+            </ul>
+            <button type="submit">start now</button>
+          </div>
+          <div class="plan">
+            <h2>premium</h2>
+            <!-- <p><span>$40.00</span> /mo</p> -->
+            <h3>$40.00</h3>
+            <ul>
+              <li>4 TB Cloud Space</li>
+              <li>20 TB Data Transfer</li>
+              <li>Fully Managed Panel</li>
+              <li>15-minute Quick Support</li>
+              <li>Top Notch Web Apps</li>
+              <li>Advanced Scalable</li>
+            </ul>
+            <button type="submit">start now</button>
+          </div>
+        </div>
       </div>
     </section>
-    <!-- end pricing-table -->
+    <!-- end plans -->
 
-    <!-- start Services -->
+    <!-- start offer -->
+    <section class="offer">
+      <div class="container text-center">
+        <h2 class="section-heading">Special Offer</h2>
+        <p>
+          Subscribe This Month and get 20% discout on one of the hosting plans
+          <br />
+          Ends in 31th March
+        </p>
+        <button class="main-btn">Start Now</button>
+      </div>
+    </section>
+    <!-- end offer -->
+
+    <!-- start services -->
     <section class="services" id="services">
       <div class="container text-center">
-        <h2 class="heading">Services</h2>
-        <div class="service">
-          <i class="fal fa-tachometer-alt-fastest"></i>
+        <h2 class="section-heading">Services</h2>
+        <p>we provide best services with top technologies</p>
+        <div class="services-container">
+          <div class="service">
+            <i class="fas fa-bolt"></i>
 
-          <h3>Fastest Cloud Services</h3>
-        </div>
-        <div class="service">
-          <i class="fal fa-server"></i>
-          <h3>Best Hardware Quality</h3>
-        </div>
-        <div class="service">
-          <i class="fal fa-lock"></i>
-          <h3>Ultimate Data Security</h3>
-        </div>
+            <h3>Fastest Cloud Services</h3>
+          </div>
+          <div class="service">
+            <i class="fas fa-server"></i>
+            <h3>Best Hardware Quality</h3>
+          </div>
+          <div class="service">
+            <i class="fas fa-lock"></i>
+            <h3>Ultimate Data Security</h3>
+          </div>
 
-        <div class="service">
-          <i class="fal fa-network-wired"></i>
+          <div class="service">
+            <i class="fas fa-network-wired"></i>
 
-          <h3>Smart Network Solutions</h3>
+            <h3>Smart Network Solutions</h3>
+          </div>
         </div>
       </div>
     </section>
-    <!-- end our Services -->
+    <!-- end services -->
     <!-- start testimonials -->
+
     <section class="testimonials text-center">
-      <h2>What They Say About Us</h2>
-      <p>
-        "Ut elementum a elit sed tristique. Pellentesque sed semper erat. Orci
-        varius natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Aenean quam erat, rutrum ut malesuada."
-      </p>
-      <h3>John Smith</h3>
+      <h2 class="section-heading">testimonials</h2>
+      <p>What our customers Say About Us</p>
+      <div class="container flx">
+        <div class="content">
+          <i class="fas fa-user-alt"></i>
+          <q>
+            Ut elementum a elit sed tristique. Pellentesque sed semper erat.
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur.
+          </q>
+
+          <h3>John Smith</h3>
+        </div>
+        <div class="content">
+          <i class="fas fa-user-alt"></i>
+          <q>
+            Ut elementum a elit sed tristique. Pellentesque sed semper erat.
+            Orci varius natoque penatibus et magnis dis parturient montes,
+            nascetur.
+          </q>
+
+          <h3>Jane Anderson</h3>
+        </div>
+      </div>
+
       <div class="points">
-        <span></span>
         <span></span>
         <span></span>
         <span></span>
@@ -174,7 +209,7 @@
     <!-- end testimonials -->
     <!-- start footer -->
     <footer>
-      <div class="container">
+      <div class="container flx">
         <div class="box">
           <h2>HostBox</h2>
           <p>
@@ -189,7 +224,7 @@
           </div>
         </div>
         <div class="box">
-          <h2>Hosting</h2>
+          <h2>Web Services</h2>
           <ul>
             <li>Pricing Plans</li>
             <li>VPS Hosting</li>
@@ -218,30 +253,14 @@
         </div>
       </div>
       <div class="copyright text-center">
-        Copyright © 2020 HostBox Hosting Company - Designed by Johnny Dragovic
+        Copyright © 2021 HostBox Hosting Company - Designed by Johnny Dragovic
       </div>
     </footer>
     <!-- end footer -->
-    <!-- ---------------------------- -->
-    <script>
-      // var menubtn = document.getElementById("menubtn");
-      // var nav = document.getElementById("nav");
-      // nav.style.display = "none";
-
-      // menubtn.onclick = function () {
-      //   if (nav.style.display == "block") {
-      //     console.log(nav.style.display);
-
-      //   } else {
-      //     nav.style.display = "block";
-      //     console.log(nav.style.display);
-      //   }
-      // };
-
-      var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 1000,
-        speedAsDuration: true,
-      });
+    <script src="js/My Library.js" type="module"></script>
+    <script type="module">
+      import { hamburgerMenu } from "./js/My Library.js";
+      hamburgerMenu("arrow-up");
     </script>
   </body>
 </html>
